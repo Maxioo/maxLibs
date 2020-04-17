@@ -7,13 +7,16 @@ namespace MaxLib{
     string::string(char *aa):_data(aa){
         _data_len = _count_len(aa);
     }
+    string::string(const char *aa):_data(aa){
+        _data_len = _count_len(aa);
+    }
 
     int string::get_len() {
         return _data_len;
     }
 
     int string::_count_len(char *aa) {
-        if(aa == NULL){
+        if(aa == nullptr){
             return 0;
         }
         int max_len = 0;

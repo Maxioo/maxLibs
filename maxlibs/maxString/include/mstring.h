@@ -16,6 +16,7 @@ namespace MaxLib{
 
     public:
         string(char* );
+        string(const char*);
 
         int get_len();
     };
