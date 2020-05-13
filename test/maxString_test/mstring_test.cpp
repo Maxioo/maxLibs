@@ -13,6 +13,6 @@ TEST(stringTest, test1){
 
 TEST(stringTest, test2){
     const char *a = "This is Example";
-    MaxLib::string aa = a;
-    EXPECT_EQ(aa.get_len(), 14)
+    MaxLib::string aa(a);
+    EXPECT_EQ(aa.get_len(), 15);
 }

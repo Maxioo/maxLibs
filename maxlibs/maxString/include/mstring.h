@@ -5,20 +5,22 @@
 #ifndef MAXLIBS_STRING_H
 #define MAXLIBS_STRING_H
 
-#define NULL 0
 namespace MaxLib{
     class string{
     private:
         char* _data;
         int _data_len;
+        int _capacity;
 
-        int _count_len(char* );
+        int _count_len(const char*);
 
     public:
-        string(char* );
-        string(const char*);
+        explicit string(char* );
+        explicit string(const char*);
 
         int get_len();
+
+        ~string();
     };
 }
 
